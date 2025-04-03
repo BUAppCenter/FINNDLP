@@ -1,0 +1,23 @@
+{
+  "MVAU_hls_0": {
+    "op_mac_8bx8b": 16384,
+    "param_weight_8b": 16384,
+    "param_threshold_22b": 128
+  },
+  "MVAU_hls_1": {
+    "op_mac_8bx8b": 8192,
+    "param_weight_8b": 8192,
+    "param_threshold_22b": 64
+  },
+  "MVAU_hls_2": {
+    "op_mac_8bx8b": 64,
+    "param_weight_8b": 64,
+    "param_threshold_21b": 1
+  },
+  "total": {
+    "op_mac_8bx8b": 24640.0,
+    "param_weight_8b": 24640.0,
+    "param_threshold_22b": 192.0,
+    "param_threshold_21b": 1.0
+  }
+}

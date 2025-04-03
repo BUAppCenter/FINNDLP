@@ -1,0 +1,19 @@
+{
+  "vivado_proj_folder": "/tmp/finn_dev_cloud9/synth_out_of_context_kqvyvp8m/results_finn_design_wrapper",
+  "LUT": 17342.0,
+  "LUTRAM": 56.0,
+  "FF": 13144.0,
+  "DSP": 0.0,
+  "BRAM": 140.0,
+  "BRAM_18K": 268.0,
+  "BRAM_36K": 6.0,
+  "URAM": 0.0,
+  "Carry": 1600.0,
+  "WNS": -2.153,
+  "Delay": -2.153,
+  "vivado_version": 2024.1,
+  "vivado_build_no": 5076996.0,
+  "": 0,
+  "fmax_mhz": 139.8014818957081,
+  "estimated_throughput_fps": 8532.80529148609
+}

@@ -1,0 +1,284 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Apr  3 09:08:45 2025
+# Process ID: 1445
+# Current directory: /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_
+# Command line: vivado -mode batch -source make_project.tcl
+# Log file: /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/vivado.log
+# Journal file: /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/vivado.jou
+# Running On        :finn_dev_cloud9
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.1 LTS
+# Processor Detail  :Intel(R) Core(TM) Ultra 7 155H
+# CPU Frequency     :3000.000 MHz
+# CPU Physical cores:16
+# CPU Logical cores :22
+# Host memory       :66744 MB
+# Swap memory       :8589 MB
+# Total Virtual     :75334 MB
+# Available Virtual :73287 MB
+#-----------------------------------------------------------
+source make_project.tcl
+# create_project finn_vivado_stitch_proj /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_ -part xc7z020clg400-1
+# set_msg_config -id {[BD 41-1753]} -suppress
+# set_property ip_repo_paths [list $::env(FINN_ROOT)/finn-rtllib/memstream /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_0_9rqi0ceo /tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_0_fiyxuimi/project_MVAU_hls_0/sol1/impl/ip /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_1_q2ritno9 /tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_1_yx_acuze/project_MVAU_hls_1/sol1/impl/ip /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_2_r5sp6x1f /tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_2_vwat33q9/project_MVAU_hls_2/sol1/impl/ip /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_3_837craal] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cloud9/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_0_9rqi0ceo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_0_fiyxuimi/project_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_1_q2ritno9'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_1_yx_acuze/project_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_2_r5sp6x1f'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_2_vwat33q9/project_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_3_837craal'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+# create_bd_design finn_design
+Wrote  : </tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_0_9rqi0ceo/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_0_9rqi0ceo/StreamingFIFO_rtl_0.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_0 StreamingFIFO_rtl_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_0
+# create_bd_pin -dir I -type clk /MVAU_hls_0/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_0/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_0/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_0/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_0:1.0 /MVAU_hls_0/MVAU_hls_0
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_0/MVAU_hls_0_wstrm
+# set_property -dict [list CONFIG.DEPTH {16384} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_0_fiyxuimi/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_0/MVAU_hls_0_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_0/ap_rst_n] [get_bd_pins MVAU_hls_0/MVAU_hls_0_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_0/ap_clk] [get_bd_pins MVAU_hls_0/MVAU_hls_0_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_0/ap_rst_n] [get_bd_pins MVAU_hls_0/MVAU_hls_0/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_0/ap_clk] [get_bd_pins MVAU_hls_0/MVAU_hls_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/in0_V] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/out_V] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_1_q2ritno9/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_1_q2ritno9/StreamingFIFO_rtl_1.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_1 StreamingFIFO_rtl_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_1
+# create_bd_pin -dir I -type clk /MVAU_hls_1/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_1/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_1/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_1/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_1:1.0 /MVAU_hls_1/MVAU_hls_1
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_1/MVAU_hls_1_wstrm
+# set_property -dict [list CONFIG.DEPTH {8192} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_1_yx_acuze/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_1/MVAU_hls_1_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 15.0 is provided. The value is converted to long type(15)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_1/ap_rst_n] [get_bd_pins MVAU_hls_1/MVAU_hls_1_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_1/ap_clk] [get_bd_pins MVAU_hls_1/MVAU_hls_1_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_1/ap_rst_n] [get_bd_pins MVAU_hls_1/MVAU_hls_1/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_1/ap_clk] [get_bd_pins MVAU_hls_1/MVAU_hls_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/in0_V] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/out_V] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_2_r5sp6x1f/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_2_r5sp6x1f/StreamingFIFO_rtl_2.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_2 StreamingFIFO_rtl_2
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_2
+# create_bd_pin -dir I -type clk /MVAU_hls_2/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_2/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_2/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_2/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_2:1.0 /MVAU_hls_2/MVAU_hls_2
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_2/MVAU_hls_2_wstrm
+# set_property -dict [list CONFIG.DEPTH {64} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_cloud9/code_gen_ipgen_MVAU_hls_2_vwat33q9/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_2/MVAU_hls_2_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 8.0 is provided. The value is converted to long type(8)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_2/ap_rst_n] [get_bd_pins MVAU_hls_2/MVAU_hls_2_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_2/ap_clk] [get_bd_pins MVAU_hls_2/MVAU_hls_2_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_2/ap_rst_n] [get_bd_pins MVAU_hls_2/MVAU_hls_2/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_2/ap_clk] [get_bd_pins MVAU_hls_2/MVAU_hls_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/in0_V] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/out_V] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_3_837craal/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_cloud9/code_gen_ipgen_StreamingFIFO_rtl_3_837craal/StreamingFIFO_rtl_3.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_3 StreamingFIFO_rtl_3
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# make_bd_pins_external [get_bd_pins StreamingFIFO_rtl_0/ap_clk]
+# set_property name ap_clk [get_bd_ports ap_clk_0]
+# make_bd_pins_external [get_bd_pins StreamingFIFO_rtl_0/ap_rst_n]
+# set_property name ap_rst_n [get_bd_ports ap_rst_n_0]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_0/out_V] [get_bd_intf_pins MVAU_hls_0/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/out_V] [get_bd_intf_pins StreamingFIFO_rtl_1/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_1/out_V] [get_bd_intf_pins MVAU_hls_1/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/out_V] [get_bd_intf_pins StreamingFIFO_rtl_2/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2/out_V] [get_bd_intf_pins MVAU_hls_2/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/out_V] [get_bd_intf_pins StreamingFIFO_rtl_3/in0_V]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingFIFO_rtl_0/in0_V]
+# set_property name s_axis_0 [get_bd_intf_ports in0_V_0]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingFIFO_rtl_3/out_V]
+# set_property name m_axis_0 [get_bd_intf_ports out_V_0]
+# set_property CONFIG.FREQ_HZ 200000000 [get_bd_ports /ap_clk]
+# validate_bd_design
+# save_bd_design
+Wrote  : </tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# make_wrapper -files [get_files /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd] -top
+INFO: [BD 41-1662] The design 'finn_design.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+# add_files -norecurse /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+INFO: [Project 1-1716] Could not find the wrapper file /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, checking in project .gen location instead.
+INFO: [Vivado 12-12390] Found file /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, adding it to Project
+# set_property top finn_design_wrapper [current_fileset]
+# ipx::package_project -root_dir /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/ip -vendor xilinx_finn -library finn -taxonomy /UserIP -module finn_design -import_files
+INFO: [BD 41-1662] The design 'finn_design.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
+Verilog Output written to : /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_0/MVAU_hls_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_0/MVAU_hls_0_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_1/MVAU_hls_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_1/MVAU_hls_1_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_2/MVAU_hls_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_2/MVAU_hls_2_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3 .
+Exporting to file /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hw_handoff/finn_design.hwh
+Generated Hardware Definition File /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.hwdef
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+WARNING: [IP_Flow 19-11888] Component Definition 'xilinx_finn:finn:finn_design:1.0 (finn_design_v1_0)': IP description "finn_design_v1_0" is not meaningful: same as name or display name
+INFO: [IP_Flow 19-7067] Note that bus interface 's_axis_0' has a fixed FREQ_HZ of '200000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'm_axis_0' has a fixed FREQ_HZ of '200000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'CLK.AP_CLK' has a fixed FREQ_HZ of '200000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+# set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+# ipx::remove_segment -quiet m_axi_gmem0:APERTURE_0 [ipx::get_address_spaces m_axi_gmem0 -of_objects [ipx::current_core]]
+# set_property core_revision 2 [ipx::find_open_core xilinx_finn:finn:finn_design:1.0]
+# ipx::create_xgui_files [ipx::find_open_core xilinx_finn:finn:finn_design:1.0]
+# set_property value_resolve_type user [ipx::get_bus_parameters -of [ipx::get_bus_interfaces -of [ipx::current_core ]]]
+# set core [ipx::current_core]
+# file copy -force data ip/
+# set file_group [ipx::add_file_group -type software_driver {} $core]
+# set_property type mdd       [ipx::add_file data/finn_design.mdd $file_group]
+# set_property type tclSource [ipx::add_file data/finn_design.tcl $file_group]
+# set impl_files [ipx::get_file_groups xilinx_implementation -of $core]
+# foreach xci [ipx::get_files -of $impl_files {*.xci}] {
+#     ipx::remove_file [get_property NAME $xci] $impl_files
+# }
+WARNING: [BD 5-233] No interface ports matched 'get_bd_intf_ports -filter CONFIG.PROTOCOL==AXI4LITE'
+# foreach port [get_bd_intf_ports -filter {CONFIG.PROTOCOL==AXI4LITE}] {
+#     set pin $port
+#     set awidth ""
+#     while { $awidth == "" } {
+#         set pins [get_bd_intf_pins -of [get_bd_intf_nets -boundary_type lower -of $pin]]
+#         set kill [lsearch $pins $pin]
+#         if { $kill >= 0 } { set pins [lreplace $pins $kill $kill] }
+#         if { [llength $pins] != 1 } { break }
+#         set pin [lindex $pins 0]
+#         set awidth [get_property CONFIG.ADDR_WIDTH $pin]
+#     }
+#     if { $awidth == "" } {
+#        puts "CRITICAL WARNING: Unable to construct address map for $port."
+#     } {
+#        set range [expr 2**$awidth]
+#        set range [expr $range < 4096 ? 4096 : $range]
+#        puts "INFO: Building address map for $port: 0+:$range"
+#        set name [get_property NAME $port]
+#        set addr_block [ipx::add_address_block Reg0 [ipx::add_memory_map $name $core]]
+#        set_property range $range $addr_block
+#        set_property slave_memory_map_ref $name [ipx::get_bus_interfaces $name -of $core]
+#     }
+# }
+# ipx::update_checksums $core
+# ipx::save_core $core
+# file rename -force ip/component.xml ip/component.bak
+# set ifile [open ip/component.bak r]
+# set ofile [open ip/component.xml w]
+# set buf [list]
+# set kill 0
+# while { [eof $ifile] != 1 } {
+#     gets $ifile line
+#     if { [string match {*<spirit:fileSet>*} $line] == 1 } {
+#         foreach l $buf { puts $ofile $l }
+#         set buf [list $line]
+#     } elseif { [llength $buf] > 0 } {
+#         lappend buf $line
+# 
+#         if { [string match {*</spirit:fileSet>*} $line] == 1 } {
+#             if { $kill == 0 } { foreach l $buf { puts $ofile $l } }
+#             set buf [list]
+#             set kill 0
+#         } elseif { [string match {*<xilinx:subCoreRef>*} $line] == 1 } {
+#             set kill 1
+#         }
+#     } else {
+#         puts $ofile $line
+#     }
+# }
+# close $ifile
+# close $ofile
+# set all_v_files [get_files -filter {USED_IN_SYNTHESIS == 1 && (FILE_TYPE == Verilog || FILE_TYPE == SystemVerilog || FILE_TYPE =="Verilog Header")}]
+# set fp [open /tmp/finn_dev_cloud9/vivado_stitch_proj_92colox_/all_verilog_srcs.txt w]
+# foreach vf $all_v_files {puts $fp $vf}
+# close $fp
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  3 09:08:58 2025...
