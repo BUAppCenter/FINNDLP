@@ -30,10 +30,7 @@
 
 | Layer                         | Details                             |
 |-------------------------------|------------------------------------:|
-| **QuantLinear**               | Input: 320, Output: 128, **8-bit quantization** |
-| **BatchNorm**                 | 128                                |
-| **ReLU**                      | **8-bit quantization**             |
-| **QuantLinear**               | Input: 128, Output: 128, **8-bit quantization** |
+| **QuantLinear**               | Input: 50, Output: 128, **8-bit quantization** |
 | **BatchNorm**                 | 128                                |
 | **ReLU**                      | **8-bit quantization**             |
 | **QuantLinear**               | Input: 128, Output: 64, **8-bit quantization** |
