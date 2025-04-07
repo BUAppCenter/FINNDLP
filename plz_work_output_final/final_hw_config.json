@@ -2,7 +2,7 @@
   "Defaults": {},
   "StreamingFIFO_rtl_0": {
     "ram_style": "auto",
-    "depth": 128,
+    "depth": 32,
     "impl_style": "rtl",
     "inFIFODepths": [
       0
@@ -12,22 +12,41 @@
     ]
   },
   "MVAU_hls_0": {
-    "PE": 1,
-    "SIMD": 1,
+    "PE": 4,
+    "SIMD": 8,
     "ram_style": "auto",
     "resType": "auto",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0,
     "inFIFODepths": [
-      128
+      32
     ],
     "outFIFODepths": [
-      61
+      2
     ]
   },
   "StreamingFIFO_rtl_1": {
     "ram_style": "auto",
-    "depth": 61,
+    "depth": 2,
+    "impl_style": "rtl",
+    "inFIFODepths": [
+      0
+    ],
+    "outFIFODepths": [
+      0
+    ]
+  },
+  "StreamingDataWidthConverter_rtl_0": {
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      32
+    ]
+  },
+  "StreamingFIFO_rtl_2": {
+    "ram_style": "auto",
+    "depth": 32,
     "impl_style": "rtl",
     "inFIFODepths": [
       0
@@ -38,19 +57,19 @@
   },
   "MVAU_hls_1": {
     "PE": 1,
-    "SIMD": 1,
+    "SIMD": 16,
     "ram_style": "auto",
     "resType": "auto",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0,
     "inFIFODepths": [
-      61
+      32
     ],
     "outFIFODepths": [
       2
     ]
   },
-  "StreamingFIFO_rtl_2": {
+  "StreamingFIFO_rtl_3": {
     "ram_style": "auto",
     "depth": 2,
     "impl_style": "rtl",
@@ -75,7 +94,7 @@
       2
     ]
   },
-  "StreamingFIFO_rtl_3": {
+  "StreamingFIFO_rtl_4": {
     "ram_style": "auto",
     "depth": 2,
     "impl_style": "rtl",
