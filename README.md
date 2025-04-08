@@ -3,17 +3,13 @@
 ## 📄 Files & Purpose
 
 - **Model Design & Training**
-  - `notebook/end2end_example/cybersecurity/custom/pt_MLP.ipynb`  
+  - `pt_MLP.ipynb`  
     → This file is for model design, training, and conversion to QONNX format.  
     → The converted file is exported as `plz_work.onnx` to the path shown above.
 
 - **FPGA Model Conversion**
-  - `notebook/end2end_example/cybersecurity/3-build-accelerator-with-finn.ipynb`  
+  - `n3-build-accelerator-with-finn.ipynb`  
     → This file is used to convert a model for an FPGA board using FINN.
-
-- **Others**  
-  → The remaining files and folders are required for running the **FINN framework** or are example codes.
-
 ---
 
 ## ⚙️ Environment
@@ -34,10 +30,7 @@
 
 | Layer                         | Details                             |
 |-------------------------------|------------------------------------:|
-| **QuantLinear**               | Input: 320, Output: 128, **8-bit quantization** |
-| **BatchNorm**                 | 128                                |
-| **ReLU**                      | **8-bit quantization**             |
-| **QuantLinear**               | Input: 128, Output: 128, **8-bit quantization** |
+| **QuantLinear**               | Input: 50, Output: 128, **8-bit quantization** |
 | **BatchNorm**                 | 128                                |
 | **ReLU**                      | **8-bit quantization**             |
 | **QuantLinear**               | Input: 128, Output: 64, **8-bit quantization** |
@@ -64,15 +57,6 @@
 - **Accuracy**: 0.9905
 
 ---
-
-## ▶️ How to Run
-
-```bash
-# Install environment
-git clone (this repository)
-cd (project root folder)
-bash ./run-docker.sh notebook
-```
 
 ---
 
